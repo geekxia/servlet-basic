@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0">
+	<display-name>Servlet</display-name>
+	
+	<listener>
+		<listener-class>cn.geekxia.TestListener</listener-class>
+	</listener>
+	
+	<filter>
+		<init-param>
+			<param-name>filterKey</param-name>
+			<param-value>filterValue</param-value>
+		</init-param>
+		<filter-name>TestFilter</filter-name>
+		<filter-class>cn.geekxia.TestFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>TestFilter</filter-name>
+		<url-pattern>/</url-pattern>
+	</filter-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Hello</servlet-name>
+		<servlet-class>
+			cn.geekxia.TestServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Hello</servlet-name>
+		<url-pattern>/Hello</url-pattern>
+		<url-pattern>/Hello/*</url-pattern>
+		<url-pattern>/World</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>TestMethod</servlet-name>
+		<servlet-class>
+			cn.geekxia.TestMethod
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestMethod</servlet-name>
+		<url-pattern>/TestMethod</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<init-param>
+			<param-name>k1</param-name>
+			<param-value>value1</param-value>
+		</init-param>
+		<init-param>
+			<param-name>k2</param-name>
+			<param-value>value2</param-value>
+		</init-param>
+		<servlet-name>TestServletConfig</servlet-name>
+		<servlet-class>
+			cn.geekxia.TestServletConfig
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestServletConfig</servlet-name>
+		<url-pattern>/TestServletConfig</url-pattern>
+	</servlet-mapping>
+	
+	
+	<context-param>
+		<param-name>global-k1</param-name>
+		<param-value>global-value1</param-value>
+	</context-param>
+	<context-param>
+		<param-name>global-k2</param-name>
+		<param-value>global-value2</param-value>
+	</context-param>
+	
+	<servlet>
+		<servlet-name>TestServletContext</servlet-name>
+		<servlet-class>
+			cn.geekxia.TestServletContext
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestServletContext</servlet-name>
+		<url-pattern>/TestServletContext</url-pattern>
+	</servlet-mapping>
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404.html</location>
+	</error-page>
+	
+	
+	<servlet>
+		<servlet-name>TestCookie</servlet-name>
+		<servlet-class>
+			cn.geekxia.TestCookie
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestCookie</servlet-name>
+		<url-pattern>/TestCookie</url-pattern>
+	</servlet-mapping>
+	
+	
+	<session-config>
+		<session-timeout>2</session-timeout>
+	</session-config>
+	<servlet>
+		<servlet-name>TestSession</servlet-name>
+		<servlet-class>
+			cn.geekxia.TestSession
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestSession</servlet-name>
+		<url-pattern>/TestSession</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ServletA</servlet-name>
+		<servlet-class>
+			cn.geekxia.ServletA
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletA</servlet-name>
+		<url-pattern>/ServletA</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ServletB</servlet-name>
+		<servlet-class>
+			cn.geekxia.ServletB
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletB</servlet-name>
+		<url-pattern>/ServletB</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ServletC</servlet-name>
+		<servlet-class>
+			cn.geekxia.ServletC
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletC</servlet-name>
+		<url-pattern>/ServletC</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TestConcurrent</servlet-name>
+		<servlet-class>
+			cn.geekxia.TestConcurrent
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestConcurrent</servlet-name>
+		<url-pattern>/TestConcurrent</url-pattern>
+	</servlet-mapping>
+</web-app>
